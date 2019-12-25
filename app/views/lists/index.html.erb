@@ -13,26 +13,27 @@
           <% @lists.each do |list| %>
             <li>
               <div class="view">
-                <label><a href="#"><%= list.name %></a></label>
+
+                <label><%= link_to list.name, list_path(list) %></label>
               </div>
             </li>
           <% end %>
 
           <li>
             <div class="view">
-              <label><a href="#">Shopping List</a></label>
+              <label><a href="#">Demo - Shopping List</a></label>
             </div>
           </li>
 
           <li>
             <div class="view">
-              <label><a href="#">Gift List</a></label>
+              <label><a href="#">Demo - Gift List</a></label>
             </div>
           </li>
 
           <li>
             <div class="view">
-              <label><a href="#">Reading List</a></label>
+              <label><a href="#">Demo - Reading List</a></label>
             </div>
           </li>
 
