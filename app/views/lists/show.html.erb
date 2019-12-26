@@ -9,14 +9,15 @@
 			<section class="main">
 
 				<ul class="todo-list">
-
-            <li>
+					<% @list.items.each do |item| %>
+						<li>
               <div class="view">
-                this is the show page
+                <label><%=item.description %></label>
               </div>
             </li>
-
+						<% end %>
         </ul>
+
 			</section>
 
     	<footer class="footer">
