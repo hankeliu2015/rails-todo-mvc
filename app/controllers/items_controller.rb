@@ -4,9 +4,7 @@ class ItemsController < ApplicationController
     @item = @list.items.build(item_params)
     @item.save
     redirect_to list_path(@list)
-
     # raise params.inspect
-
   end
 
   private
