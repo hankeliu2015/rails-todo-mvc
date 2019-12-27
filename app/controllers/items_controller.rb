@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
   #patch - /lists/:list_id/items/:id
 
   def update
+    # raise params.inspect
     @item = Item.find(params[:id])
     @list = List.find(params[:list_id])
     @item.update(item_params)
