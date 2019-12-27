@@ -14,9 +14,12 @@ class ListsController < ApplicationController
     # raise params.inspect
     @list = List.new(list_params)
     # @list.name = params[:list][:name]
-    @list.save
-
-    redirect_to list_path(@list)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      @lists = List.all
+      render :index
+    end
   end
 
   private

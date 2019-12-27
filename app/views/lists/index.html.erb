@@ -3,8 +3,9 @@
 <section class="todoapp">
 			<header class="header">
 				<h1>Your ToDo Lists</h1>
+			<!-- 	<%# <% raise @list.errors.inspect %> %>-->
 				<%= form_for(@list) do |f| %>
-					<%= f.text_field :name, :class => "new-todo" %>
+					<%= f.text_field :name, :class => "new-todo", :placeholder => (@list.errors.full_messages.first || "Enter a new list name...") %>
 					<%= f.submit :style => "display: none" %>
 				<% end %>
 
