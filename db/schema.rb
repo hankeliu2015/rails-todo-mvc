@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_12_27_042126) do
     t.integer "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status"
+    t.integer "status", default: 0
   end
 
   create_table "lists", force: :cascade do |t|
