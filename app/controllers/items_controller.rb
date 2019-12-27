@@ -11,9 +11,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  #patch - /lists/:list_id/items/:id
+
+  def update
+    @item = Item.find(params[:id])
+    @list = List.find(params[:list_id])
+    @item.update(item_params)
+
+    redirect_to list_path(@item.list)
+  end
+
   private
 
   def item_params
-    params.require(:item).permit(:description)
+    params.require(:item).permit(:description, :status)
   end
 end
