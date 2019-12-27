@@ -15,7 +15,7 @@
 
 				<ul class="todo-list">
 					<% @list.items.each do |item| %>
-						<li>
+						<li class="<%= "completed" if item.complete? %>">
               <div class="view">
 								<input class="toggle" type="checkbox">
                 <label><%=item.description %></label>
