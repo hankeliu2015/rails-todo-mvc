@@ -24,7 +24,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    raise params.inspect
+    # raise params.inspect
+    @item = Item.find_by(id: params[:id])
+    @item.destroy
+    redirect_to list_path(@item.list)
   end
 
   private
