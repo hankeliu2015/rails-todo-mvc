@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'items/creat'
+  get 'items/create'
   resources :lists do
     resources :items
   end

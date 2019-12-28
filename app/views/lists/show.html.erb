@@ -20,9 +20,12 @@
 
 								<%= form_for([@list, item]) do |f| %>
 
-									<%= f.check_box :status, :checked => (true if item.complete?) %>
+								<%= f.check_box :status, class: "toggle", :checked => (true if item.complete?) %>
+
+								<!-- <input class="toggle" type="checkbox"> -->
 
 								<% end %>
+
 
                 <label><%=item.description %></label>
               </div>
