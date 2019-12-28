@@ -23,6 +23,10 @@ class ItemsController < ApplicationController
     redirect_to list_path(@item.list)
   end
 
+  def destroy
+    raise params.inspect
+  end
+
   private
 
   def item_params
