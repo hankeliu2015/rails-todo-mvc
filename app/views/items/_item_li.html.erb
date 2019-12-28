@@ -1,4 +1,7 @@
-<li class="<%= li_class_for_item(item) %>">
+<!-- <li class="<%#= li_class_for_item(item) %>"> -->
+
+
+<%= content_tag :li, item, class: li_class_for_item(item) do %>
   <div class="view">
 
     <%= form_for([@list, item]) do |f| %>
@@ -11,4 +14,6 @@
 
     <label><%=item.description %></label>
   </div>
-</li>
+<!-- </li> -->
+
+<% end %>
