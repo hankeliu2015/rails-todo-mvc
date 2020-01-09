@@ -13,12 +13,14 @@
     <% end %>
 
     <label><%=item.description %></label>
-    <%= form_tag(list_item_path(item.list, item), method: :delete) do  %>
+
+    <%= button_to "x", list_item_path(item.list, item), method: "delete", class: "destroy" %>
+    <%#= form_tag(list_item_path(item.list, item), method: :delete) do  %>
     <!--<form action="<%#= list_item_path(item.list, item) %>" method="post">-->
       <!-- <input type="hidden" name="_method" value="DELETE"> -->
-      <button type="submit" class="destroy"></button>
+      <!-- <button type="submit" class="destroy"></button> -->
     <!-- </form> -->
-    <% end %>
+    <!--<%# end %>-->
   </div>
 <!-- </li> -->
 
