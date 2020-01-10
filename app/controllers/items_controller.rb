@@ -12,9 +12,7 @@ class ItemsController < ApplicationController
   end
 
   #patch - /lists/:list_id/items/:id
-
   def update
-    # binding.pry
      # raise params.inspect
     @item = Item.find(params[:id])
     @list = List.find(params[:list_id])

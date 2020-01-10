@@ -12,8 +12,8 @@
 			</header>
 
 			<section class="main">
-				<input class="toggle-all" type="checkbox">
-				<label for="toggle-all">Mark all as complete</label>
+				<!-- <input class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark all as complete</label> -->
 
 				<ul class="todo-list">
 					<% @list.items.each do |item| %>
@@ -22,11 +22,20 @@
 
 								<%= form_for([@list, item]) do |f| %>
 
-								<%= f.check_box :status, class: "toggle", :checked => (true if item.complete?) %>
+									<%= f.check_box :status, :checked => (true if item.complete?) %>
+									<%= f.submit %>
+								<% end %>
 
-								<!-- <input class="toggle" type="checkbox"> -->
+								<input class="toggle" type="checkbox" <%= "checked='checked'" if item.complete? %>> 
+
+
+								<!--
+								<%= form_for([@list, item]) do |f| %>
+
+									<%= f.check_box :status, class: "toggle", :checked => (true if item.complete?) %>
 
 								<% end %>
+								-->
 
                 <label><%=item.description %></label>
               </div>
