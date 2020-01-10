@@ -190,6 +190,21 @@ body {
 	appearance: none;
 }
 
+.todo-list li form .toggletest1 {
+	text-align: center;
+	width: 40px;
+	/* auto, since non-WebKit browsers doesn't support input styling */
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none; /* Mobile Safari */
+	/* -webkit-appearance: none;
+	appearance: none; */
+}
+
+
 .todo-list li .toggle {
 	opacity: 0;
 }

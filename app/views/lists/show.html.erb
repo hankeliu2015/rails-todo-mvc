@@ -25,8 +25,7 @@
 									<%= f.check_box :status, :checked => (true if item.complete?) %>
 									<%= f.submit %>
 								<% end %>
-
-								<input class="toggle" type="checkbox" <%= "checked='checked'" if item.complete? %>> 
+								<input class="toggle" type="checkbox" <%= "checked='checked'" if item.complete? %>>
 
 
 								<!--

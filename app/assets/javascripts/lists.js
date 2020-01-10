@@ -1,10 +1,10 @@
 
-$(function(){
-  $("input.toggle").on("change", function(){
-    console.log('worked');
-    $(this).siblings("form").trigger("submit")
-  })
-});
+// $(function(){
+//   $("input.toggle").on("change", function(){
+//     console.log('worked');
+//     $(this).siblings("form").trigger("submit")
+//   })
+// });
 
 $(function(){
   $("input.toggle").on("change", function(){
