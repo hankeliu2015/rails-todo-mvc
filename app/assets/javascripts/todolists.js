@@ -13,6 +13,6 @@ $(function(){
   })
 });
 
-// function test123() {
-//   console.log("this is the funcion");
-// }
+function test123() {
+  console.log("this is the funcion");
+}
