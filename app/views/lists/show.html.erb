@@ -1,4 +1,19 @@
-
+<style media="screen">
+	.toggletest {
+		text-align: center;
+		width: 40px;
+		/* auto, since non-WebKit browsers doesn't support input styling */
+		height: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		border: none; /* Mobile Safari */
+		<!-- -webkit-appearance: none; -->
+		<!-- appearance: none; -->
+		opacity: 0;
+	}
+</style>
 
 <section class="todoapp">
 			<header class="header">
@@ -22,10 +37,11 @@
 
 								<%= form_for([@list, item]) do |f| %>
 
-									<%= f.check_box :status, :checked => (true if item.complete?) %>
+									<%= f.check_box :status, class: "toggle", :checked => (true if item.complete?) %>
 									<%= f.submit %>
 								<% end %>
 
+								
 								<input class="toggle" type="checkbox" <%= "checked='checked'" if item.complete? %>>
 
 
@@ -38,6 +54,7 @@
 								-->
 
                 <label><%=item.description %></label>
+
 								<%= button_to "x", list_item_path(item.list, item), method: "delete", class: "destroy" %>
               </div>
             </li>
