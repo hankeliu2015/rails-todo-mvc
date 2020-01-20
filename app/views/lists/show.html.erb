@@ -12,10 +12,8 @@
 		<!-- -webkit-appearance: none; -->
 		<!-- appearance: none; -->
 		<!-- opacity: 0; -->
-	}
-</style> -->
-
-<a href="#" id="hide_this"> click to hide	</a>
+	<!-- }
+</style> --> -->
 
 <section class="todoapp">
 			<header class="header">
@@ -55,7 +53,7 @@
 								<% end %>
 								-->
 
-                <label><%=item.description %></label>
+                <label class= "hide_this"><%=item.description %></label>
 
 								<%= button_to "x", list_item_path(item.list, item), method: "delete", class: "destroy" %>
               </div>
