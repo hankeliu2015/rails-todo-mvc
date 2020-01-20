@@ -21,8 +21,9 @@
             <li>
               <div class="view">
 
-                <label><%= link_to list.name, list_path(list) %></label>
+								<label style="display:inline-block"><%= link_to list.name, list_path(list) %></label>
 
+								<a style="display:inline-block; color:maroon; font-size:0.5em" href="#">click to hide</a>
               </div>
             </li>
           <% end %>
