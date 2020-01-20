@@ -16,3 +16,12 @@ $(function(){
 function test123() {
   console.log("this is the funcion");
 }
+
+// hide the element when clicked.
+function hideWhenClicked(e){
+  e.preventDefault();
+  const $target = $(e.target);
+  $target.hide();
+}
+
+$('#hide_this').click(hideWhenClicked)
